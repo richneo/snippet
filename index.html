@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Snippet Generator - TechWiseNet</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Code Snippet Generator</h1>
+    </header>
+
+    <main>
+      <div class="generator-container">
+        <!-- 왼쪽: 설정 패널 -->
+        <div class="settings-panel">
+          <select id="languageSelect">
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+          </select>
+
+          <select id="categorySelect">
+            <option value="function">Function</option>
+            <option value="class">Class</option>
+            <option value="api">API Call</option>
+          </select>
+
+          <div id="dynamicInputs">
+            <!-- 동적으로 생성되는 입력 필드들 -->
+          </div>
+        </div>
+
+        <!-- 오른쪽: 미리보기 -->
+        <div class="preview-panel">
+          <pre><code id="snippetPreview" class="language-javascript"></code></pre>
+          <button id="copyBtn">Copy Code</button>
+          <button id="saveBtn">Save Snippet</button>
+        </div>
+      </div>
+
+      <!-- 저장된 스니펫 목록 -->
+      <div class="saved-snippets">
+        <h2>Saved Snippets</h2>
+        <div id="snippetsList"></div>
+      </div>
+    </main>
+
+    <script src="js/prism.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  </body>
+</html>
